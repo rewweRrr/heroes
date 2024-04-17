@@ -1,5 +1,5 @@
 import { FC, memo, ReactNode } from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
 import NavTabs from "../components/nav-tabs/nav-tabs.component.tsx";
 
 type MainLayoutProps = {
@@ -10,14 +10,18 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
       <AppBar position="static">
-        <Toolbar>
-          <Typography flexGrow={1} variant="h6">
-            Dota Statistic
-          </Typography>
-          <NavTabs />
-        </Toolbar>
+        <Container>
+          <Toolbar disableGutters>
+            <Typography flexGrow={1} variant="h6">
+              Dota Statistic
+            </Typography>
+            <NavTabs />
+          </Toolbar>
+        </Container>
       </AppBar>
-      {children}
+      <Container>
+        <Box pt={2}>{children}</Box>
+      </Container>
     </>
   );
 };
