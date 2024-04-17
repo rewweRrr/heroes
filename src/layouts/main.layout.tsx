@@ -1,23 +1,20 @@
 import { FC, memo, ReactNode } from "react";
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+import NavTabs from "../components/nav-tabs/nav-tabs.component.tsx";
 
 type MainLayoutProps = {
   children: ReactNode;
 };
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
-  const navItems = ["Home", "About", "Contact"];
-
   return (
     <>
-      <AppBar>
+      <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6">Heroes</Typography>
-          <Box>
-            {navItems.map((item) => (
-              <Button key={item}>{item}</Button>
-            ))}
-          </Box>
+          <Typography flexGrow={1} variant="h6">
+            Dota Statistic
+          </Typography>
+          <NavTabs />
         </Toolbar>
       </AppBar>
       {children}

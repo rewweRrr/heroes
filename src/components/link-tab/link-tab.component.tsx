@@ -1,23 +1,21 @@
 import { FC, memo } from "react";
 import { Tab } from "@mui/material";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type LinkTabProps = {
+  value: string;
   label?: string;
-  href?: string;
-  selected?: boolean;
 };
 
 const LinkTab: FC<LinkTabProps> = (props) => {
-  const navigation = useNavigation();
+  const navigate = useNavigate();
   return (
     <Tab
       component="a"
       onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
-          navigation
+        navigate(props.value);
       }}
-      aria-current={props.selected && "page"}
       {...props}
     />
   );
