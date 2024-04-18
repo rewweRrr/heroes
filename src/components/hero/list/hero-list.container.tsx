@@ -1,4 +1,4 @@
-import { memo, FC } from "react";
+import { FC, memo } from "react";
 import heroes from "../../../data/heroes.json";
 import HeroList from "./hero-list.component.tsx";
 

@@ -1,7 +1,8 @@
 import { FC, memo } from "react";
 import MainLayout from "../layouts/main.layout";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import HeroListContainer from "../components/hero/list/hero-list.container.tsx";
+import HeroCreation from "../components/hero/creation/hero-creation.component.tsx";
 
 type HeroesPageProps = {};
 
@@ -10,9 +11,12 @@ const HeroesPage: FC<HeroesPageProps> = () => {
     <MainLayout>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant="h3" component="h3">
-            Heroes
-          </Typography>
+          <Stack direction="row" columnGap={2} alignItems="center">
+            <Typography variant="h3" component="h3">
+              Heroes
+            </Typography>
+            <HeroCreation />
+          </Stack>
         </Grid>
         <Grid item xs={12}>
           <HeroListContainer />
