@@ -3,3 +3,5 @@ export interface HeroModel {
   name: string;
   description?: string;
 }
+
+export type HeroCreationFormModel = Omit<HeroModel, "id">;

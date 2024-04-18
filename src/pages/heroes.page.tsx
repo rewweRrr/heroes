@@ -2,7 +2,7 @@ import { FC, memo } from "react";
 import MainLayout from "../layouts/main.layout";
 import { Grid, Stack, Typography } from "@mui/material";
 import HeroListContainer from "../components/hero/list/hero-list.container.tsx";
-import HeroCreation from "../components/hero/creation/hero-creation.component.tsx";
+import HeroCreationContainer from "../components/hero/creation/hero-creation.container.tsx";
 
 type HeroesPageProps = {};
 
@@ -15,7 +15,7 @@ const HeroesPage: FC<HeroesPageProps> = () => {
             <Typography variant="h3" component="h3">
               Heroes
             </Typography>
-            <HeroCreation />
+            <HeroCreationContainer />
           </Stack>
         </Grid>
         <Grid item xs={12}>
