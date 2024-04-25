@@ -1,0 +1,38 @@
+[
+  {
+    "information": {
+      "orderNumber": 1,
+      "sign": "H",
+      "name": "Hydrogen",
+      "weight": "1.008"
+    },
+    "position": {
+      "row": 1,
+      "column": 1
+    }
+  },
+  {
+    "information": {
+      "orderNumber": 2,
+      "sign": "He",
+      "name": "Helium",
+      "weight": "4.0026"
+    },
+    "position": {
+      "row": 1,
+      "column": 18
+    }
+  },
+  {
+    "information": {
+      "orderNumber": 27,
+      "sign": "Co",
+      "name": "Cobalt",
+      "weight": "58.933"
+    },
+    "position": {
+      "row": 4,
+      "column": 9
+    }
+  }
+]
